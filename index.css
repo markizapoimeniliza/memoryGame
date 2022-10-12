@@ -1,0 +1,163 @@
+
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html,body {
+    background: linear-gradient(50deg, rgb(140, 248, 151), rgb(69, 221, 135), rgb(52, 255, 41));
+    background-size: 100%;
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    height: 100vh;
+    width: 100vw;
+    /* overflow: hidden; */
+    position: fixed;
+}
+
+
+
+
+/* flex - by default elements*/
+.container{
+    display: flex;
+    position: relative;
+    justify-content: space-evenly;
+    flex-flow: row nowrap;
+    padding-top: 1.5vh;
+}
+
+.flexItems{
+    position: relative;
+    align-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    /* font-size: 3vmax; */
+    color: black;
+    
+}
+
+/*change card WITHOUT MOVEMENT*/
+.cards,
+#points{
+    background-color: silver;
+    position: relative;
+    left: 4vmin;
+    top: 2vmin;
+    padding: 0%;
+    /* height: 7vh;
+    width: 7vh; */
+    display: inline-block;
+    border: 2px solid black;
+}
+
+.cards:hover, 
+#points:hover{
+    background-color: black;
+}
+
+/* 1 ch = 10px  1rem = 16px(root of DOM)  1em = inherits from a parent 
+*/
+.wrapper{
+    display: grid;
+    grid-template: 15vmin 15vmin 15vmin/ 20vmin 20vmin 20vmin 20vmin;
+    justify-content: center;
+    align-items: center;
+    padding-top: 8vmin;
+    margin-left: -2vmin;
+    perspective: 1000px;
+    gap: 8vmin 4vmin;
+}
+
+
+
+/*flip moment*/
+
+.memory-card{
+    width: calc(25%-10px);
+    height: calc(14vmin - 2px);
+    position: relative;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    margin: 2vw;
+    border-radius: 23%;
+    /* box-shadow: 1vmin 1vmin 1vmin 2px silver; */
+    transition: transform .5s; 
+    visibility: visible;
+}
+
+/*existence in html*/
+.flip{
+    /* right corner*/
+    transform-origin: 10vmin 10vmin;
+    transform: rotateY(0.5turn);
+}
+
+.memory-card:active{
+    transform: scale(0.94);
+    transition: .05s ;
+}
+
+.front{
+    position: absolute;
+    width: 19vmin;
+    height: 19vmin;
+    /*outer border edge CANNOT BE USED ON PADDING!*/
+    /* border-radius: 15px; */
+    backface-visibility: hidden;
+    -webkit-backface-visibility:hidden;
+    /*rotate to an end side*/
+    transform: rotateY(180deg);
+    border-radius: 15px;
+    box-shadow: 1vmin 1vmin 1vmin 2px silver;
+   
+   
+}
+
+.end{
+    position: absolute;
+    width: 19vmin;
+    height: 19vmin;
+    border-radius: 15px;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden; 
+    box-shadow: 1vmin 1vmin 1vmin 2px silver;
+}
+
+
+.pop-up{
+    border-radius: 20%;
+    visibility: hidden;
+    /*all text inside*/
+    text-align: center;
+    
+
+}
+
+.pop-upOutput{
+    position: sticky;
+    transform: translate(38vw,-60vmin);
+    visibility: visible;
+    border-radius: 20%;
+    font-size: 3vmin;
+    background-color: white;
+    transition: translate .05s ease;
+    /*relative to a prent element*/
+    width: 38vmin;
+    height: 22vmin;
+    padding-top: 4vmin;
+    color: black;
+    box-shadow: 0.5vmin 0.5vmin 0.5vmin 1px silver;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold !important ;
+    padding-left: 13%;
+    padding-right: 13%;
+}
+
+
+.btn{
+    border: 12 solid silver;
+    box-shadow: 0.5vmin 0.5vmin 0.5vmin 0.5px black;
+}
+
