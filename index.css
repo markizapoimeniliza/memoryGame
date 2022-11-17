@@ -159,5 +159,6 @@ html,body {
 .btn{
     border: 12 solid silver;
     box-shadow: 0.5vmin 0.5vmin 0.5vmin 0.5px black;
+    font: black
 }
 
