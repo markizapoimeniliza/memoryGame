@@ -43,7 +43,7 @@ html,body {
 #points{
     background-color: silver;
     position: relative;
-    left: 4vmin;
+    left: 2vmin;
     top: 2vmin;
     padding: 0%;
     /* height: 7vh;
