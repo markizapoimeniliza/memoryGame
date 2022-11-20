@@ -32,7 +32,7 @@
         }
         else if (!off && seconds > 0){
             --seconds
-            timer.innerHTML = `<span style= "position: relative; top: -1vh; font-size: 2.7vmin; line-height: 0px " >${seconds} seconds</span>`
+            timer.innerHTML = `<span style= "position: relative; top: -1vh; font-size: 2.7vmin; left: -1vw" >${seconds}seconds</span>`
         }
         else{}
     }, 1000)
