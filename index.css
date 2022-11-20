@@ -47,8 +47,8 @@ html,body {
     left: 4vmin;
     top: 2vmin;
     padding: 0%;
-    /* height: 7vh;
-    width: 7vh; */
+    height: 7vh;
+    /*width: 7vh; */
     display: inline-block;
     border: 2px solid black;
 }
